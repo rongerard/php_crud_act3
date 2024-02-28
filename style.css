@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+/* buttons */
+
+
+
+.add_button {
+    padding: 12px 20px;
+    /* Increase padding for better click/tap target */
+    color: #fff;
+    /* Set text color to white for better contrast */
+    background-color: #28a745;
+    /* Use a slightly lighter shade of green */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add border radius for rounded corners */
+    font-size: 16px;
+    /* Increase font size for better readability */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Add smooth transition for hover effect */
+}
+
+.add_button:hover {
+    background-color: #218838;
+    /* Darken the background color on hover */
+}
+
+.action_button {
+    display: inline-flex;
+    /* Use inline-flex for better alignment */
+    justify-content: flex-start;
+    /* Align buttons to the start of the container */
+    gap: 10px;
+    /* Add gap between buttons for spacing */
+}
+
+
+.update_button {
+    padding: 10px 15px;
+    /* Increase padding for better click/tap target */
+    background-color: #ffc107;
+    /* Use a slightly lighter shade of yellow */
+    color: #212529;
+    /* Set text color to a darker shade for better contrast */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add border radius for rounded corners */
+    font-size: 16px;
+    /* Increase font size for better readability */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Add smooth transition for hover effect */
+    margin-left: 10px;
+    /* Add margin for spacing between buttons */
+}
+
+.update_button:hover {
+    background-color: #e0a800;
+    /* Darken the background color on hover */
+}
+
+
+.delete_button {
+    padding: 10px 15px;
+    /* Increase padding for better click/tap target */
+    background-color: #dc3545;
+    /* Use a slightly lighter shade of red */
+    color: #fff;
+    /* Set text color to white for better contrast */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add border radius for rounded corners */
+    font-size: 16px;
+    /* Increase font size for better readability */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Add smooth transition for hover effect */
+}
+
+.delete_button:hover {
+    background-color: #c82333;
+    /* Darken the background color on hover */
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search_button {
+    padding: 10px 15px;
+    /* Adjust padding as needed */
+    color: #fff;
+    /* Text color */
+    background-color: #007bff;
+    /* Background color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add border radius for rounded corners */
+    font-size: 16px;
+    /* Font size */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.search_button:hover {
+    background-color: #0056b3;
+    /* Darker background color on hover */
+}
+
+.back_button {
+    display: inline-block;
+    /* Display as block element */
+    padding: 10px 15px;
+    /* Adjust padding as needed */
+    color: #fff;
+    /* Text color */
+    background-color: #007bff;
+    /* Background color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add border radius for rounded corners */
+    text-decoration: none;
+    /* Remove default underline */
+    font-size: 16px;
+    /* Font size */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    /* Darker background color on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Define zebra striping for the table rows */
+.song-table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+    /* Light gray background for odd rows */
+
+}
+
+/* Define zebra striping for the table rows */
+.song-table tr:nth-child(even) {
+    /* Light gray background for odd rows */
+    background-color: #ffffff;
+}
+
+
+.song-table th {
+    text-align: left;
+    /* Align text to the left */
+    padding: 15px;
+    /* Padding for table headers */
+}
+
+
+
+/* Style the table cells */
+.song-table td {
+    padding: 15px;
+    /* Padding for table cells */
+}
+
+/* Style the table */
+.song-table {
+    width: 100%;
+    /* Make the table span the full width of its container */
+    border-collapse: collapse;
+    /* Collapse borders between table cells */
+}
+
+
+
+
+
+/* Define hover effect for table rows */
+.song-table tr:hover {
+    background-color: #ddd;
+    /* Light gray background on hover */
+}
+
+
+/* delete.php*/
+
+/* style.css */
+
+/* styles.css */
+
+/* Reset default styles */
+
+/* Style the input */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    /* Remove default focus outline */
+}
+
+/* Style the input when focused */
+input[type="text"]:focus {
+    border-color: #007bff;
+    /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add a subtle shadow on focus */
+}
+
+/* Style placeholder text */
+input[type="text"]::placeholder {
+    color: #999;
+}
