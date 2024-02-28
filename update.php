@@ -12,9 +12,7 @@ if(isset($_REQUEST["song_value_code"])){
 }
 ?>
 
-<style>
-<?php include 'style.css'; ?>
-</style>
+
 
 
 
@@ -107,6 +105,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["song_code"])) {
 
     $xml->getElementsByTagName("songs")[0]->replaceChild($newSong,$song);
     $xml->save("songs.xml");
+
+    header('Location: retrieve.php');
+    exit();
 if($_SESSION["song_value"] === ""){
     echo "Updated!";
 
@@ -155,12 +156,14 @@ if(isset($_SESSION["song_value"]) && $_SESSION["song_value"] != "") {
 
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_all'])) {
-
-    echo '<form action="update.php" method="post">';
+    
+    echo '<div class = "update_container">';
+    echo '<form action="update.php" method="post" class = "edit_form">';
     echo '<input type="hidden" name="song_code" value="' . $_SESSION['song_value'] . '"><br>';
     echo 'Song Title: <input type="text" name="title" value="' . $_SESSION['song_title'] . '"><br>'; 
     echo 'Song Genre: <input type="text" name="genre" value="' . $_SESSION['song_genre'] . '"><br>'; 
     echo 'Song Album: <input type="text" name="album" value="' . $_SESSION['song_album'] . '"><br>'; 
+   
 
      // Convert array to string before inserting into input field
      $singers = implode(", ", $_SESSION['song_singers']);
@@ -168,6 +171,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_all'])) {
     echo 'Song Singers: <input type="text" name="singers" value="' . htmlspecialchars($singers) . '"><br>'; 
     echo '<input type="submit" value="Update Record">';
     echo '</form>';
+    echo '</div>'; 
 }
 ?>
 
@@ -195,7 +199,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_title'])) {
     echo ' <input type="hidden" name="album" value="' . $_SESSION['song_album'] . '"><br>'; 
     $singers = implode(", ", $_SESSION['song_singers']);
 
-    echo 'Song Singers: <input type="hidden" name="singers" value="' . htmlspecialchars($singers) . '"><br>'; 
+    echo '<input type="hidden" name="singers" value="' . htmlspecialchars($singers) . '"><br>'; 
     echo '<input type="submit" value="Update Record">';
     echo '</form>';
 }
@@ -224,7 +228,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_genre'])) {
     echo ' <input type="hidden" name="album" value="' . $_SESSION['song_album'] . '"><br>'; 
     $singers = implode(", ", $_SESSION['song_singers']);
 
-    echo 'Song Singers: <input type="hidden" name="singers" value="' . htmlspecialchars($singers) . '"><br>'; 
+    echo '<input type="hidden" name="singers" value="' . htmlspecialchars($singers) . '"><br>'; 
     echo '<input type="submit" value="Update Record">';
     echo '</form>';
 }
@@ -253,7 +257,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_album'])) {
     echo 'Song Album: <input type="text" name="album" value="' . $_SESSION['song_album'] . '"><br>';
     $singers = implode(", ", $_SESSION['song_singers']);
 
-    echo 'Song Singers: <input type="hidden" name="singers" value="' . htmlspecialchars($singers) . '"><br>'; 
+    echo '<input type="hidden" name="singers" value="' . htmlspecialchars($singers) . '"><br>'; 
     echo '<input type="submit" value="Update Record">';
     echo '</form>';
 }
@@ -293,7 +297,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_singers'])) {
 </body>
 </html>
 
-
+<style>
+<?php include 'style.css'; ?>
+</style>
 <a href = "retrieve.php">Go back to main page</a>
 
 

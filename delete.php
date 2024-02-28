@@ -10,15 +10,15 @@ if(isset($_REQUEST["song_value_code"])){
 }
 
 ?>
-<style>
-<?php include 'style.css'; ?>
-</style>
+
 
 
 <?php
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["song_code"])) {
+    
+   
     $songCodeToDelete = $_POST["song_code"];
 
     // Load the XML file
@@ -53,7 +53,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["song_code"])) {
 
         // Save the changes back to the XML file
         $xml->save("songs.xml");
-        
+      
+        header('Location: retrieve.php');
+        exit();
+    
         echo "Record(s) with Song Code <b>$songCodeToDelete</b> has been deleted successfully.";
     } else {
         echo "Record with Song Code <b>$songCodeToDelete </b>not found.";
@@ -116,6 +119,8 @@ echo '
 
 ?>
 <br><br>
-
+<style>
+<?php include 'style.css'; ?>
+</style>
 
 <a href = "retrieve.php">Go back to main page</a>

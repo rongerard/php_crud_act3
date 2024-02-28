@@ -83,9 +83,13 @@ function compareSongCodes($a, $b) {
 usort($songsArray, 'compareSongCodes');
 
 // Generate HTML output for the sorted songs
+// Generate HTML output for the sorted songs
 $output = "";
+// Counter for in-order numbers
+$count = 1;
 foreach ($songsArray as $song) {
     $output .= "<tr>
+        <td>{$count}</td>
         <td>{$song['song_code']}</td>
         <td>{$song['title']}</td>
         <td>{$song['genre']}</td>
@@ -104,10 +108,13 @@ foreach ($songsArray as $song) {
             </div>
         </td>
     </tr>";
+    // Increment the counter
+    $count++;
 }
 
 echo "<table class='song-table'>
     <tr>
+        <th>#</th>
         <th>Song Code</th>
         <th>Title</th>
         <th>Genre</th>
@@ -115,6 +122,7 @@ echo "<table class='song-table'>
         <th>Singers</th>
         <th>Action</th>
     </tr> $output </table>";
+
 ?>
 
 

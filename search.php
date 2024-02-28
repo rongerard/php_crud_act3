@@ -74,6 +74,8 @@ if (isset($_POST["song_search"])) {
 
     // Construct HTML output for the table
     $output = "";
+
+    $count = 1;
     foreach ($songsArray as $song) {
         // Check if the current song matches the search criteria
         if (stripos($song['song_code'], $song_search) !== false ||
@@ -83,7 +85,7 @@ if (isset($_POST["song_search"])) {
             in_array(strtolower($song_search), array_map('strtolower', explode(", ", $song['singers']))) ||
             stripos($song['singers'], $song_search) !== false) {
             // Construct HTML table row
-            $output .= "<tr>
+            $output .= "<tr><td>{$count}</td>
                             <td> {$song['song_code']} </td>
                             <td> {$song['title']} </td>
                             <td> {$song['genre']} </td>
@@ -102,11 +104,12 @@ if (isset($_POST["song_search"])) {
                                 </div>
                             </td>
                         </tr>";
+                        $count++;
         }
     }
 
     echo "<table class='song-table'>
-            <tr>
+            <tr><th> # </th>
                 <th> Song Code </th>
                 <th> Title </th>
                 <th> Genre </th>

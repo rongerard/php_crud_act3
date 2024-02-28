@@ -228,25 +228,64 @@
 /* Reset default styles */
 
 /* Style the input */
-input[type="text"] {
+/* Define styles for paragraph */
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Define styles for input fields */
+input[type="text"],
+input[type="submit"] {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Define styles for buttons */
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+/* Define styles for links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.edit_form {
+    display: flex;
+    flex-direction: column;
+    /* Align items vertically */
+    align-items: center;
+    background-color: #fff;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    /* Remove default focus outline */
 }
 
-/* Style the input when focused */
-input[type="text"]:focus {
-    border-color: #007bff;
-    /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    /* Add a subtle shadow on focus */
+.update_container {
+    display: flex;
+    justify-content: center;
+
 }
 
-/* Style placeholder text */
-input[type="text"]::placeholder {
-    color: #999;
-}
+/* Optional: Add more styles as needed */
