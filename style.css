@@ -50,6 +50,12 @@
     /* Add gap between buttons for spacing */
 }
 
+/* styles.css */
+.icon-image {
+    width: 20px;
+    height: 20px;
+}
+
 
 .update_button {
     padding: 10px 15px;
@@ -113,21 +119,20 @@
 
 .search_button {
     padding: 10px 15px;
-    /* Adjust padding as needed */
     color: #fff;
-    /* Text color */
     background-color: #007bff;
-    /* Background color */
     border: none;
-    /* Remove border */
     border-radius: 5px;
-    /* Add border radius for rounded corners */
     font-size: 16px;
-    /* Font size */
     cursor: pointer;
-    /* Change cursor to pointer on hover */
     transition: background-color 0.3s ease;
-    /* Smooth transition for hover effect */
+}
+
+.search_button img {
+    width: 10px;
+    /* Set the desired width */
+    height: 10px;
+    /* Set the desired height */
 }
 
 .search_button:hover {
@@ -289,3 +294,62 @@ a:hover {
 }
 
 /* Optional: Add more styles as needed */
+
+
+/* add-form */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.add-form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-form-container form {
+    margin-top: 10px;
+}
+
+.add-form-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

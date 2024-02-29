@@ -296,10 +296,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_singers'])) {
 
 </body>
 </html>
-
+<a href = "retrieve.php" class = "back-link">Go back to main page</a>
 <style>
 <?php include 'style.css'; ?>
 </style>
-<a href = "retrieve.php">Go back to main page</a>
+
 
 

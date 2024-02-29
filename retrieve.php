@@ -6,8 +6,6 @@ if(isset($_SESSION["song_value_search"])){
 }else{
 $_SESSION["song_value_search"] = "";
 }
-
-
 ?>
 
 
@@ -24,16 +22,14 @@ $_SESSION["song_value_search"] = "";
 <body>
 
 <!-- REQUEST SESSION GET ,SET -->
-    
-
-
-
 <div class="head">
     <a href="create.php"><button class="add_button">+ Add New Record</button></a>
     <form action="search.php" method="post">
         Search
-        <input type="text" name="song_search" placeholder="Search" value="<?php echo $_SESSION["song_value_search"] ?>" >
-        <input type="submit" value="Search" class = "search_button">
+        <input type="text" name="song_search" placeholder="Search" value="<?php echo $_SESSION["song_value_search"] ?>">
+        <button type="submit" class="search_button">
+            <img src="search-icon.png" alt="Search">
+        </button>
     </form>
 </div>
 
@@ -96,16 +92,24 @@ foreach ($songsArray as $song) {
         <td>{$song['album']}</td>
         <td>{$song['singers']}</td>
         <td>
-            <div class='action_button'>
-                <form action='delete.php' method='post'>
-                    <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
-                    <button class='delete_button'>Delete</button>
-                </form>
-                <form action='update.php' method='post'>
-                    <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
-                    <button class='update_button'>Update</button>
-                </form>
-            </div>
+        
+        <div class='action_button'>
+        <form action='delete.php' method='post'>
+        <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
+        <button class='delete_button'> <img src='delete.png' alt='Delete' class='icon-image'></button>
+    </form>
+    <form action='update.php' method='post'>
+    <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
+    <button class='update_button'>
+        <img src='edit.png' alt='Update' class='icon-image'>
+    </button>
+</form>
+
+        </a>
+    
+</div>
+
+    
         </td>
     </tr>";
     // Increment the counter
@@ -124,6 +128,4 @@ echo "<table class='song-table'>
     </tr> $output </table>";
 
 ?>
-
-
 

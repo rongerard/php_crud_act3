@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Document</title>
 </head>
 <body>
-    
+ <div class = "add-form-container">
 <form action="create.php" method="post">
 Song Code: <input type="text" name="song_code"><br>
 Song Title: <input type="text" name="title"><br>
@@ -61,7 +61,8 @@ Song Singers: <input type="text" name="singers"><br>
 
 <input type="submit" value="Add Record"><br>
 </form>
-<a href = "retrieve.php">Go back to main page</a>
+</div>
+<a href = "retrieve.php" class = "back-link">Go back to main page</a>
 </body>
 </html>
 

@@ -24,14 +24,28 @@ if (isset($_POST["song_search"])) {
     <title>Document</title>
 </head>
 <body>
-    <div class="head">
+    <!-- <div class="head">
         <a href="create.php"><button class="add_button">+ Add New Record</button></a>
         <form action="search.php" method="post">
             Search
             <input type="text" name="song_search" placeholder="Search" value="<?php echo $song_search?>">
             <input type="submit" value="Search"  class = "search_button">
         </form>
-    </div>
+    </div> -->
+
+    <div class="head">
+    <a href="create.php"><button class="add_button">+ Add New Record</button></a>
+    <form action="search.php" method="post">
+        Search
+        <input type="text" name="song_search" placeholder="Search" value="<?php echo $song_search ?>">
+        <button type="submit" class="search_button">
+        <img src="search-icon.png" alt="Search">
+        </button>
+    </form>
+</div>
+
+    
+    
 
     <?php
     $xml = new DOMDocument();
@@ -93,14 +107,17 @@ if (isset($_POST["song_search"])) {
                             <td> {$song['singers']} </td>
                             <td>
                                 <div class='action_button'>
-                                    <form action='delete.php' method='post'>
-                                        <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
-                                        <button class='delete_button'>Delete</button>
-                                    </form>
-                                    <form action='update.php' method='post'>
-                                        <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
-                                        <button class='update_button'>Update</button>
-                                    </form>
+                                <form action='delete.php' method='post'>
+                                <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
+                                <button class='delete_button'> <img src='delete.png' alt='Delete' class='icon-image'></button>
+                            </form>
+                            <form action='update.php' method='post'>
+                            <input type='hidden' name='song_value_code' value='{$song['song_code']}'>
+                            <button class='update_button'>
+                                <img src='edit.png' alt='Update' class='icon-image'>
+                            </button>
+                        </form>
+                        
                                 </div>
                             </td>
                         </tr>";

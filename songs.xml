@@ -1,26 +1,8 @@
 <?xml version="1.0"?>
 <songs>
-<song song_code="Mus_1"><singer>Soulthrll</singer><singer>Castro1</singer><singer>1</singer><title>Cutie Uyyy</title><genre>Rap</genre><album>Single</album></song>
-<song song_code="Mus_2">
-<imagePath>/images/2.png</imagePath>
-<title>Cruel Summer</title>
-<genre>Pop</genre>
-<album>Lover</album>
-<singers>
-<singer>Taylor Swift</singer>
-<singer>Nicki Minaj</singer>
-</singers>
-</song>
-<song song_code="Mus_3">
-<imagePath>/images/3.png</imagePath>
-<title>Bad Example</title>
-<genre>Pop</genre>
-<album>2019-2021</album>
-<singers>
-<singer>Takayan</singer>
-<singer>Randy Daddy</singer>
-</singers>
-</song>
+
+
+
 <song song_code="Mus_4"><singer>Slipknot</singer><singer>1</singer><title>Limbo</title><genre>Pop</genre><album>Gabriel</album></song>
 <song song_code="Mus_5">
 <imagePath>/images/5.png</imagePath>
@@ -73,14 +55,5 @@
 <singer>Fraun</singer>
 </singers>
 </song>
-<song song_code="Mus_10">
-<imagePath>/images/10.png</imagePath>
-<title>Open Arms</title>
-<genre>Hard Rock</genre>
-<album>Escape</album>
-<singers>
-<singer>Journey</singer>
-<singer>Edgar</singer>
-</singers>
-</song>
-<song song_code="432"><singer>234</singer><singer>1</singer><title>432</title><genre>342</genre><album>342</album></song><song song_code="213"><singer>123123</singer><singer>11aa</singer><title>123a</title><genre>123a</genre><album>1231a</album></song><song song_code="312"><singer>123</singer><title>123</title><genre>123</genre><album>123</album></song></songs>
+
+<song song_code="SVT1"><singer>SEVENTEEN</singer><singer>Roses</singer><title>CLAP!</title><genre>Pop</genre><album>Love On Top!</album></song><song song_code="2311"><singer>Sarah</singer><singer>Geronimo</singer><title>Itaktak Mo</title><genre>Pop</genre><album>Single</album></song><song song_code="21"><singer>Paul</singer><singer>Mong</singer><title>Guessin</title><genre>Rap</genre><album>Iba</album></song><song song_code="41703"><singer>Kuneho</singer><singer>Apex</singer><title>Pagong</title><genre>Jazz</genre><album>Monster</album></song><song song_code="1"><singer>11</singer><singer>1</singer><title>11</title><genre>11</genre><album>11</album></song></songs>
